@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -43,80 +45,129 @@ section{
     padding:90px 0;
 }
 
-h1,h2,h3{
-    line-height:1.2;
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(15,23,42,.9);
+    backdrop-filter:blur(10px);
+
+    z-index:999;
 }
 
-p{
-    color:#cbd5e1;
-    line-height:1.7;
+.nav-logo{
+    color:#e2b96f;
+    font-weight:700;
+    font-size:1.2rem;
+}
+
+.nav-links a{
+    color:white;
+    margin-left:25px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e2b96f;
 }
 
 /* HERO */
 
 .hero{
     min-height:100vh;
+
     display:flex;
     align-items:center;
     text-align:center;
+
     background:
     radial-gradient(circle at top,#e2b96f22 0%,transparent 35%),
     linear-gradient(180deg,#0f172a,#111827);
 }
 
-.hero-content{
-    width:100%;
-}
-
 .logo{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:24px;
-    margin-bottom:25px;
-    border:3px solid #e2b96f;
-    box-shadow:0 0 40px rgba(226,185,111,.35);
-}
+    width:220px;
+    max-width:80%;
 
-.logo-text{
-    width:120px;
-    height:120px;
-    margin:0 auto 25px;
-    border-radius:24px;
-    background:#e2b96f;
-    color:#0f172a;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:3rem;
-    font-weight:800;
-    box-shadow:0 0 40px rgba(226,185,111,.35);
+    margin-bottom:30px;
+
+    filter:
+    drop-shadow(0 0 15px rgba(226,185,111,.5))
+    drop-shadow(0 0 40px rgba(226,185,111,.25));
 }
 
 .hero h1{
-    font-size:4rem;
     color:#e2b96f;
+    font-size:4rem;
+}
+
+.hero-subtitle{
+    color:#e2b96f;
+    margin-top:10px;
+    font-weight:500;
 }
 
 .hero p{
     max-width:700px;
-    margin:20px auto 35px;
-    font-size:1.1rem;
+    margin:25px auto 35px;
+
+    color:#cbd5e1;
+    line-height:1.8;
 }
+
+/* BUTTON */
 
 .btn{
     display:inline-block;
+
     background:#e2b96f;
     color:#0f172a;
+
     font-weight:700;
+
     padding:15px 35px;
+
     border-radius:12px;
+
     transition:.3s;
 }
 
 .btn:hover{
     transform:translateY(-4px);
-    box-shadow:0 10px 30px rgba(226,185,111,.35);
+
+    box-shadow:
+    0 10px 30px rgba(226,185,111,.35);
+}
+
+/* STATS */
+
+.stats{
+    margin-top:60px;
+
+    display:flex;
+    justify-content:center;
+    gap:50px;
+
+    flex-wrap:wrap;
+}
+
+.stats h3{
+    color:#e2b96f;
+    font-size:2rem;
+}
+
+.stats p{
+    color:#cbd5e1;
 }
 
 /* SECTION TITLES */
@@ -133,9 +184,11 @@ p{
 
 .section-title p{
     margin-top:10px;
+    color:#cbd5e1;
 }
 
-/* GAME CARD */
+```css id="4t0r9e"
+/* GAME SECTION */
 
 .game-card{
     display:grid;
@@ -146,83 +199,141 @@ p{
 
 .game-card img{
     width:100%;
+    max-width:400px;
+
+    display:block;
+    margin:auto;
+
     border-radius:20px;
-    box-shadow:0 10px 40px rgba(0,0,0,.4);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.4);
 }
 
 .game-info h3{
     font-size:2rem;
     margin-bottom:20px;
+
     color:#e2b96f;
+}
+
+.game-info p{
+    color:#cbd5e1;
+    line-height:1.8;
 }
 
 /* FEATURES */
 
 .features{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:25px;
 }
 
 .feature{
+
     background:#1e293b;
+
     padding:30px;
+
     border-radius:20px;
+
     transition:.3s;
 }
 
 .feature:hover{
+
     transform:translateY(-6px);
-    box-shadow:0 10px 30px rgba(226,185,111,.15);
+
+    box-shadow:
+    0 10px 30px rgba(226,185,111,.15);
 }
 
 .feature h3{
+
     color:#e2b96f;
+
     margin-bottom:15px;
+}
+
+.feature p{
+
+    color:#cbd5e1;
 }
 
 /* SCREENSHOTS */
 
 .gallery{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:20px;
 }
 
 .gallery img{
+
     width:100%;
+
     border-radius:18px;
+
     transition:.3s;
 }
 
 .gallery img:hover{
-    transform:scale(1.03);
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.4),
+    0 0 20px rgba(226,185,111,.25);
 }
 
 /* ABOUT */
 
 .about{
+
     max-width:900px;
+
     margin:auto;
+
     text-align:center;
+}
+
+.about p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
 }
 
 /* CONTACT */
 
 .contact{
+
     text-align:center;
 }
 
 .contact a{
+
     color:#e2b96f;
 }
 
 /* FOOTER */
 
 footer{
+
     border-top:1px solid #1e293b;
+
     padding:35px 20px;
+
     text-align:center;
+
     color:#94a3b8;
 }
 
@@ -230,125 +341,257 @@ footer{
 
 @media(max-width:900px){
 
-.hero h1{
-    font-size:2.8rem;
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .game-card{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
 }
 
-.game-card{
-    grid-template-columns:1fr;
-}
-
-}
-
-</style>
+    </style>
 </head>
 <body>
+
+    ```html id="1gwd8y"
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="nav-logo">
+        DaironApps
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#game">
+            Game
+        </a>
+
+        <a href="#features">
+            Features
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="container hero-content">
+<div class="container">
 
-<div class="logo-text">DA</div>
+    <img
+    src="logo.png"
+    alt="DaironApps Logo"
+    class="logo">
 
-<h1>DaironApps</h1>
+    <h1>DaironApps</h1>
 
-<p>
-Independent game developer creating fun and engaging mobile games.
-Discover Distract Shot and future projects built with passion.
-</p>
+    <h3 class="hero-subtitle">
+        Mobile Game Developer
+    </h3>
 
-<a class="btn"
-href="https://play.google.com/store/apps/details?id=com.daironapps.distractshot"
-target="_blank">
-Download Distract Shot
-</a>
+    <p>
+        Independent game developer creating fun and engaging mobile games.
+        Discover Distract Shot and future projects built with passion.
+    </p>
+
+    <a
+    class="btn"
+    href="https://play.google.com/store/apps/details?id=com.daironapps.distractshot"
+    target="_blank">
+
+        Download Distract Shot
+
+    </a>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div>
+            <h3>2D</h3>
+            <p>Physics Combat</p>
+        </div>
+
+        <div>
+            <h3>1v1</h3>
+            <p>Local Multiplayer</p>
+        </div>
+
+        <div>
+            <h3>Bosses</h3>
+            <p>Epic Battles</p>
+        </div>
+
+    </div>
 
 </div>
 
 </section>
+
+
 
 <!-- GAME -->
 
-<section>
+<section id="game">
 
 <div class="container">
 
-<div class="section-title">
-<h2>Featured Game</h2>
-<p>Our latest mobile game</p>
-</div>
+    <div class="section-title">
 
-<div class="game-card">
+        <h2>
+            Distract Shot
+        </h2>
 
-<img src="Icon_Game.png" alt="Distract Shot">
+        <p>
+            Western Action • Physics Based Combat
+        </p>
 
-<div class="game-info">
+    </div>
 
-<h3>Distract Shot</h3>
 
-<p>
-A fast-paced western action game where every shot matters.
-Master realistic recoil physics, defeat powerful bosses,
-unlock new weapons and skins, and challenge friends in local
-1v1 multiplayer battles.
-</p>
 
-<br>
+    <div class="game-card">
 
-<a class="btn"
-href="https://play.google.com/store/apps/details?id=com.daironapps.distractshot"
-target="_blank">
-Play Now
-</a>
+        <img
+        src="Icon_Game.png"
+        alt="Distract Shot">
 
-</div>
 
-</div>
+        <div class="game-info">
+
+            <h3>
+                Featured Game
+            </h3>
+
+            <p>
+
+                A fast-paced western action game where every shot matters.
+
+                Master realistic recoil physics,
+                defeat powerful bosses,
+                unlock new weapons and skins,
+                and challenge friends in local
+                1v1 multiplayer battles.
+
+            </p>
+
+            <br>
+
+            <a
+            class="btn"
+            href="https://play.google.com/store/apps/details?id=com.daironapps.distractshot"
+            target="_blank">
+
+                Play Now
+
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
+
+
 
 <!-- FEATURES -->
 
-<section>
+<section id="features">
 
 <div class="container">
 
-<div class="section-title">
-<h2>Game Features</h2>
-<p>Why players love Distract Shot</p>
-</div>
+    <div class="section-title">
 
-<div class="features">
+        <h2>
+            Game Features
+        </h2>
 
-<div class="feature">
-<h3>Realistic Recoil</h3>
-<p>Control every shot with unique recoil-based gameplay.</p>
-</div>
+        <p>
+            Why players love Distract Shot
+        </p>
 
-<div class="feature">
-<h3>Boss Battles</h3>
-<p>Fight increasingly difficult enemies and epic bosses.</p>
-</div>
+    </div>
 
-<div class="feature">
-<h3>Unlockables</h3>
-<p>Earn weapons, skins and upgrades as you progress.</p>
-</div>
+    <div class="features">
 
-<div class="feature">
-<h3>Local Multiplayer</h3>
-<p>Challenge friends in exciting local 1v1 matches.</p>
-</div>
+        <div class="feature">
 
-</div>
+            <h3>
+                Realistic Recoil
+            </h3>
+
+            <p>
+                Control every shot with unique recoil-based gameplay.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <h3>
+                Boss Battles
+            </h3>
+
+            <p>
+                Fight increasingly difficult enemies and epic bosses.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <h3>
+                Unlockables
+            </h3>
+
+            <p>
+                Earn weapons, skins and upgrades as you progress.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <h3>
+                Local Multiplayer
+            </h3>
+
+            <p>
+                Challenge friends in exciting local 1v1 matches.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
+
+```html id="txq7hd"
 
 <!-- SCREENSHOTS -->
 
@@ -356,86 +599,144 @@ Play Now
 
 <div class="container">
 
-<div class="section-title">
-<h2>Screenshots</h2>
-<p>Take a look inside the game</p>
-</div>
+    <div class="section-title">
 
-<div class="gallery">
+        <h2>
+            Screenshots
+        </h2>
 
-<img src="screenshot.png" alt="">
-<img src="screenshot2.png" alt="">
-<img src="screenshot3.png" alt="">
-<img src="screenshot4.png" alt="">
+        <p>
+            Take a look inside the game
+        </p>
 
-</div>
+    </div>
+
+
+    <div class="gallery">
+
+        <img
+        src="screenshot1.png"
+        alt="Gameplay">
+
+        <img
+        src="screenshot2.png"
+        alt="Boss Battle">
+
+        <img
+        src="screenshot3.png"
+        alt="Shop">
+
+        <img
+        src="screenshot4.png"
+        alt="Multiplayer">
+
+    </div>
 
 </div>
 
 </section>
+
+
 
 <!-- ABOUT -->
 
-<section>
+<section id="about">
 
 <div class="container">
 
-<div class="section-title">
-<h2>About DaironApps</h2>
-</div>
+    <div class="section-title">
 
-<div class="about">
+        <h2>
+            About DaironApps
+        </h2>
 
-<p>
-DaironApps is an independent game development studio focused on
-creating entertaining and rewarding mobile experiences using Unity.
-Our mission is to build games that are fun, challenging, and accessible
-to players around the world.
-</p>
+    </div>
 
-</div>
+
+    <div class="about">
+
+        <p>
+
+            DaironApps is an independent game development studio focused on
+            creating entertaining and rewarding mobile experiences using Unity.
+
+            Our mission is to build games that are fun, challenging, and
+            accessible to players around the world.
+
+        </p>
+
+    </div>
 
 </div>
 
 </section>
+
+
 
 <!-- CONTACT -->
 
-<section>
+<section id="contact">
 
 <div class="container contact">
 
-<div class="section-title">
-<h2>Contact</h2>
-<p>Get in touch</p>
-</div>
+    <div class="section-title">
 
-<p>Email:</p>
+        <h2>
+            Contact
+        </h2>
 
-<p>
-<a href="mailto:vilaudairon@gmail.com">
-vilaudairon@gmail.com
-</a>
-</p>
+        <p>
+            Get in touch
+        </p>
 
-<br>
+    </div>
 
-<a class="btn"
-href="https://play.google.com/store/apps/dev?id=YOUR_DEVELOPER_ID"
-target="_blank">
-Google Play Developer Page
-</a>
+
+    <p>
+
+        <a href="mailto:vilaudairon@gmail.com">
+
+            vilaudairon@gmail.com
+
+        </a>
+
+    </p>
+
+    <br>
+
+    <a
+    class="btn"
+    href="https://play.google.com/store/apps/details?id=com.daironapps.distractshot"
+    target="_blank">
+
+        Google Play
+
+    </a>
 
 </div>
 
 </section>
 
+
+
+<!-- FOOTER -->
+
 <footer>
 
-© 2026 DaironApps. All Rights Reserved.
+    © 2026 DaironApps. All Rights Reserved.
+
+    <br><br>
+
+    <a
+    href="privacy-policy.html"
+    style="color:#e2b96f;">
+
+        Privacy Policy
+
+    </a>
 
 </footer>
 
+
 </body>
 </html>
-```
